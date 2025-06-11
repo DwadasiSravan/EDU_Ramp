@@ -72,7 +72,7 @@ class CurrentAcc extends BankAcc {
     }
 }
 
-public class SravanDwadasi_BankApp {
+public class BankApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
