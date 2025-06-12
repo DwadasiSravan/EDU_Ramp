@@ -12,7 +12,7 @@ interface AccOperations {
 abstract class BankAcc implements AccOperations {
     String customerName;
     String branchName;
-    String AccType;
+    String AccType; //helloooooooooooooooooooo
 
     BankAcc(String customerName, String branchName, String AccType) {
         this.customerName = customerName;
