@@ -6,7 +6,7 @@ interface DocVerifier {
 
 interface AccOperations {
     void openAcc();
-    void showRequiredDocs();
+    void showRequiredDocs();//hellooooooooooooooooooooooooooooooo
 }
 
 abstract class BankAcc implements AccOperations {
