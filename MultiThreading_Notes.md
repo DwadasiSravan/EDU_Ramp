@@ -60,3 +60,9 @@ Semaphore sema = new Semaphore(3);
 - Special case of counting semaphore with only one permit (value 1).
 - Functions like a mutex (mutual exclusion lock).
 - *Example:* `Semaphore sem = new Semaphore(1);`
+
+### Thread Pool :
+- A thread pool is a collection of pre-instantiated, reusable threads managed by a framework or library to perform tasks efficiently.
+- Instead of creating and destroying threads for every task, a thread pool maintains a pool of worker threads that are reused for multiple tasks, improving performance and resource management.
+
+
