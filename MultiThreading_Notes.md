@@ -1,9 +1,36 @@
 # Multi Threading
-### What is Thread?
--
+- Multithreading is a programming technique where multiple threads run concurrently within a single process. Each thread represents a separate path of execution, allowing tasks to be performed in parallel or asynchronously.
 
-- We can create thread by extending the thread class and the other method is by implementing runnable interface.
-- **Implementing runnable interface is better to use instead of extending thread class** because runnable is a funtional interface, so only run method will be extended but when it comes to thread class there are many methods when extended it comes with big bag of all methods.
+ #### Key points:
+ - Improves application performance by utilizing CPU resources efficiently.
+ - Enables simultaneous execution of two or more parts of a program.
+ - Threads share the same memory space, making communication easier but requiring synchronization.
+   
+### What is Thread?
+- A Thread in Java is a lightweight process and the smallest unit of execution. It represents an independent path of execution within a program, allowing multiple operations to run concurrently. Each thread runs in parallel (or appears to, depending on CPU cores) and shares the process’s memory space with other threads.
+  
+ #### Key points:
+ - Created by extending the **Thread class** or **implementing the Runnable interface**.
+ - Supports multitasking and parallelism.
+ - Shares resources with other threads in the same process.
+ - Managed by the Java Virtual Machine (JVM).
+ - **Implementing runnable interface is better to use instead of extending thread class** because runnable is a funtional interface, so only run method will be extended but     when it comes to thread class there are many methods when extended it comes with big bag of all methods.
+   
+  ```
+  class MyThread extends Thread {
+     public void run() {
+         System.out.println("Thread is running");
+     }
+  } 
+
+  public class Main {
+      public static void main(String[] args) {
+          MyThread t = new MyThread();
+          t.start(); // Starts the thread
+      }
+  }
+  ```
+
 ### Synchronisation:
 - When multiple threads are accessing same object then it helps to allow only one thread accessing it at one time.
 - The `synchronized keyword` can be used to lock a method or block of code, ensuring that only one thread can execute it at a time.
@@ -17,13 +44,42 @@
 
   ```
   ### Two types of Synchroniztion:
-  1. Process syn
-
+  #### 1. Process Synchronization:
+  - Coordination between multiple processes (outside Java, at OS level).
+  #### 2. Thread Synchronization:
+  - Coordination between multiple threads within the same process. In Java, this is most common and includes:
+  - Mutual Exclusive Synchronization
+     - Synchronized Method:
+        Only one thread can execute a synchronized method of an object at a time.
+     - Synchronized Block:
+        Only one thread can execute a synchronized block of code on a given object at a time.
+     - Static Synchronization:
+        Synchronized static methods lock on the class object, not the instance.
+  - Inter-thread Communication:
+    - Uses methods like wait(), notify(), and notifyAll() to coordinate thread actions.
+    
 ### Locks:
 - The Lock interface provides more flexibility than the synchronized keyword. It allows explicit locking and unlocking.
 - Synchronization is actually built arround the lock.
 - Every object has a lock associated with it.
-#### Mutual Execution lock.
+ #### 1. Mutual Execution lock:
+  - A mutual exclusion lock (often called a mutex) is a synchronization mechanism used to ensure that only one thread at a time can access a shared resource or critical section of code. This prevents race conditions and ensures data consistency in concurrent programming.<br>
+  **Key points:**
+    - Only one thread can hold the lock at any given time.
+    - Other threads attempting to acquire the lock are blocked until it is released.
+    - In Java, mutual exclusion can be achieved using the synchronized keyword or explicit Lock objects from java.util.concurrent.locks.
+  ##### Example using synchronized:
+  ```
+public class Counter {
+    private int count = 0;
+
+    public synchronized void increment() {
+        count++;
+    }
+}
+  ```
+
+
 #### Dead Lock
 #### Try Lock
 #### Re-Entrent Lock
