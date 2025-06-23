@@ -106,10 +106,10 @@ public class ArrayListThreadSafe {
 ### How to choose between Array and ArrayList : 
 #### Array: 
 - An array in Java is a fixed-size, ordered collection of elements of the same data type. Each element is accessed by its index, starting from 0.<br />
-**Key Points:**
+- **Key Points:**
     - Arrays can store primitives (like int, char) or objects (like String).
     - The size of an array is set when it is created and cannot be changed.<br />
-**Syntax for declaration and initialization:**
+- **Syntax for declaration and initialization:**
 ```
 int[] numbers = new int[5]; // Array of 5 integers
 numbers[0] = 10;            // Assign value to first element
@@ -132,14 +132,14 @@ String[] names = {"Alice", "Bob", "Charlie"}; // Array with 3 strings
 - When we come to **.put()** we feel it is actually replacing the element at that particular index but what happens in the background is a new object will be created and then the reference pointer of that index will be now pointing to the new object in the heap and the previous object will be cleared if unused by Garbage collector.
 
 ### 2. Linked List:
-- A Linked List is a linear data structure where elements (called nodes) are stored in separate memory locations and connected using pointers. Each node contains data and a reference (pointer) to the next node in the sequence.
+- A Linked List is a linear data structure where elements (called nodes) are stored in separate memory locations and connected using pointers. Each node contains data and a reference (pointer) to the next node in the sequence.<br />
 
-**Key Points:**<br />
+- **Key Points:** <br />
     - Non-contiguous storage: Nodes can be scattered in memory.
     - Dynamic size: Can grow or shrink easily by adding/removing nodes.
     - Efficient insertions/deletions: Especially at the beginning or middle (no shifting needed).
     - Slower random access: Accessing an element by index requires traversing from the head node.
-**Types:**<br />
+- **Types:** <br />
     - Singly Linked List: Each node points to the next node.
     - Doubly Linked List: Each node points to both the next and previous nodes.
     - Circular Linked List: Last node points back to the first node.
