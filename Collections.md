@@ -143,3 +143,6 @@ String[] names = {"Alice", "Bob", "Charlie"}; // Array with 3 strings
     - Singly Linked List: Each node points to the next node.
     - Doubly Linked List: Each node points to both the next and previous nodes.
     - Circular Linked List: Last node points back to the first node.
+### 3. Queue:
+
+### 4. Set:
