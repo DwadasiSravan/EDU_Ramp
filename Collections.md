@@ -1,12 +1,13 @@
 # Collections
 
 In Java, Collections are frameworks that provide architecture to store and manipulate groups of objects. The main interfaces in the Java Collections Framework are:
-  - **Collection:** The root interface for most collection classes.
-    - **List:** Ordered collection (e.g., ArrayList, LinkedList)
-    - **Set:** No duplicate elements (e.g., HashSet, TreeSet)
-    - **Queue:** Elements processed in a specific order (e.g., PriorityQueue, LinkedList)
-  - **Map:** Key-value pairs (e.g., HashMap, TreeMap)<br />
-  - **Example:** *Using ArrayList*
+  * Collection: The root interface for most collection classes.
+  * List: Ordered collection (e.g., ArrayList, LinkedList)
+  * Set: No duplicate elements (e.g., HashSet, TreeSet)
+  * Queue: Elements processed in a specific order (e.g., PriorityQueue, LinkedList)
+  * Map: Key-value pairs (e.g., HashMap, TreeMap)<br />
+  ---
+  * Example: *Using ArrayList*
     ```java
     import java.util.ArrayList;
     import java.util.List;
@@ -20,6 +21,7 @@ In Java, Collections are frameworks that provide architecture to store and manip
       }
     }
     ```
+---
 - **Key Points:**
   - Collections are in java.util package.
   - They support operations like add, remove, iterate, and search.
@@ -28,7 +30,7 @@ In Java, Collections are frameworks that provide architecture to store and manip
 ## List: 
 - In Java, the List interface is a part of the Collections Framework and represents an ordered collection (also known as a sequence). Lists can contain duplicate elements and allow positional access and insertion of elements.
 ---
-**Main Implementations of List** <br />
+* Main Implementations of List <br />
 ### 1. ArrayList:
  - Backed by a dynamic array.
  - Fast random access (get/set).
@@ -36,7 +38,7 @@ In Java, Collections are frameworks that provide architecture to store and manip
  - Thread Safety: Not thread-safe (multiple threads modifying it simultaneously can cause issues)
  - Threading Info: If you need to use it in a multi-threaded environment, wrap it with Collections.synchronizedList() or use CopyOnWriteArrayList (from java.util.concurrent).
 ---
-**Array List General Implementation Example:** <br />
+* Array List General Implementation Example: <br />
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +53,7 @@ public class ArrayListExample {
 }
 ```
 ---
-**ArrayList Thread Unsafe Implementation Example:** <br />
+* ArrayList Thread Unsafe Implementation Example: <br />
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +80,7 @@ public class ArrayListThreadUnsafe {
 }
 ```
 ---
-**ArrayList Thread Safe Implementation Example:** <br />
+* ArrayList Thread Safe Implementation Example: <br />
 ```java
 import java.util.ArrayList;
 import java.util.Collections;
@@ -109,16 +111,17 @@ public class ArrayListThreadSafe {
 ### How to choose between Array and ArrayList : 
 #### Array: 
 - An array in Java is a fixed-size, ordered collection of elements of the same data type. Each element is accessed by its index, starting from 0.<br />
-- **Key Points:**
+  * Key Points:
     - Arrays can store primitives (like int, char) or objects (like String).
     - The size of an array is set when it is created and cannot be changed.<br />
-- **Syntax for declaration and initialization:**
+  * Syntax for declaration and initialization:
 ```java
 int[] numbers = new int[5]; // Array of 5 integers
 numbers[0] = 10;            // Assign value to first element
 
 String[] names = {"Alice", "Bob", "Charlie"}; // Array with 3 strings
 ```
+---
 - So, when we know the length then we use **Array** but when we want that dynamic nature then we use **Array List**.
 - But, when there is a chance try to use array because array uses primitive data types but Array list uses Wrapper classes. When comes to Wrapper classes they use a system called padding which is when we talk about **INT** it's size is 4bytes and when padded 4 types the memory held by wrapper class will be 16bytes. So it is a mammoth kind of memory occupancy when compare to any primitive.
 - The initial **capacity of an Array List is 10**. Then when needed it tops up by 50% of the previous capacity.
@@ -137,12 +140,12 @@ String[] names = {"Alice", "Bob", "Charlie"}; // Array with 3 strings
 ### 2. Linked List:
 - A Linked List is a linear data structure where elements (called nodes) are stored in separate memory locations and connected using pointers. Each node contains data and a reference (pointer) to the next node in the sequence.<br />
 
-- **Key Points:** <br />
+  * Key Points: <br />
     - Non-contiguous storage: Nodes can be scattered in memory.
     - Dynamic size: Can grow or shrink easily by adding/removing nodes.
     - Efficient insertions/deletions: Especially at the beginning or middle (no shifting needed).
     - Slower random access: Accessing an element by index requires traversing from the head node.
-- **Types:** <br />
+  * Types: <br />
     - Singly Linked List: Each node points to the next node.
     - Doubly Linked List: Each node points to both the next and previous nodes.
     - Circular Linked List: Last node points back to the first node.
@@ -174,9 +177,75 @@ Queue<String> queue = new LinkedList<>();
 ```java
 Queue<Integer> pq = new PriorityQueue<>();
 ```
+---
+* When to use Priority Queue:
+- You want to always get the highest (or lowest) priority item first.
+- By default, PriorityQueue in Java is a min-heap.
+- You're solving problems like:
+  - Dijkstra’s algorithm (shortest path)
+  - A* algorithm (pathfinding)
+  - Job/task schedulers (e.g., CPU scheduling)
+  - Huffman Encoding (greedy algorithms)
+---
+* **Example** – Min-Heap (default behavior)
+  ```java
+  import java.util.PriorityQueue;
+  public class PriorityQueueExample {
+    public static void main(String[] args) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.add(20);
+        pq.add(10);
+        pq.add(30);
+        System.out.println("Priority Queue (Min Heap): " + pq);
+        // Removing elements based on priority (smallest first)
+        while (!pq.isEmpty()) {
+            System.out.println("Polled: " + pq.poll());
+        }
+    }
+  }
+  ```
+  ---
+**What is Min-Heap:**
+- When you frequently need to extract the smallest element efficiently. The root will always be the smallest element.<br />
+
+**How It Works Internally:**
+  * Stored as an array:
+      - **Parent** at index **i**
+      - **Left child** at **2*i + 1**
+      - **Right child** at **2*i + 2**
+  - During insert/remove, the tree is rebalanced (heapified) using **bubble up** or **bubble down**.
+---
+- In a heap (like a min heap or max heap), when you insert or remove an element, the heap property may get violated. To restore it, we use bubble up or bubble down operations (also called heapify up/down).
+---
+- **Bubble Up:** (a.k.a. Heapify Up / Sift Up)
+  - Used when you insert a new element at the bottom (last position). Move the element up the tree until the heap property is restored.
+  - **Pseudocode:**
+    ```java
+      while (child < parent) {
+        swap(child, parent);
+        child = parent index;
+      }
+    ```
+    ![image](https://github.com/user-attachments/assets/e0630c08-39fa-4843-a94c-68c977cc68a1)
+    
+---
+- **Bubble Down:** (a.k.a. Heapify Down / Sift Down)
+    - Used when you remove the root (usually min in min-heap), and move the last element to root.
+    - **Pseudocode:**
+      ```java
+       while (parent > any child) {
+          swap(parent, smallest child);
+          parent = child index;
+        }
+      ```
+      ![image](https://github.com/user-attachments/assets/f5bd26e5-3fb8-4f79-81a6-8c2e1060d595)
+---    
+| Operation   | When It's Used        | Direction   | Purpose                        |
+| ----------- | --------------------- | ----------- | ------------------------------ |
+| Bubble Up   | After insertion       | Bottom → Up | Fix heap property after insert |
+| Bubble Down | After deletion (root) | Top → Down  | Fix heap after replacing root  |
 
 ---
-
 #### 3. ArrayDeque (implements Deque, also used as Queue)
 
 * Behavior: Faster than LinkedList, supports queue and stack operations
@@ -247,3 +316,6 @@ Deque<String> deque = new ArrayDeque<>();
 ## Set:
 - Types in set.
 - Linked Hash Set
+- entry Set
+
+- HAsh Map
