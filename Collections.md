@@ -318,4 +318,46 @@ Deque<String> deque = new ArrayDeque<>();
 - Linked Hash Set
 - entry Set
 
-- HAsh Map
+## Hash Map
+---
+## Vector:
+- A Vector is a legacy interface in Java which is a resizable array (just like ArrayList), but with one key difference: it is synchronized, meaning it is thread-safe.
+- But,in single threaded environment it is slower than Arraylist due to synchronization.
+#### Basic usage example:
+```java
+import java.util.Vector;
+
+public class VectorDemo {
+    public static void main(String[] args) {
+        Vector<String> vector = new Vector<>();
+
+        // Add elements
+        vector.add("Apple");
+        vector.add("Banana");
+        vector.add("Cherry");
+
+        // Get and print elements
+        for (String fruit : vector) {
+            System.out.println(fruit);
+        }
+
+        // Remove
+        vector.remove("Banana");
+
+        System.out.println("After removal: " + vector);
+    }
+}
+```
+#### Summary:
+- Use Vector only if you need thread-safety without external synchronization.
+- Prefer ArrayList for most use cases (faster and lighter).
+- For thread-safe lists in modern code, prefer:
+```java
+List<E> list = Collections.synchronizedList(new ArrayList<>());
+```
+#### 🔄 Growth Comparison: Vector vs ArrayList
+| Feature        | Vector       | ArrayList                  |
+| -------------- | ------------ | -------------------------- |
+| Initial growth | Doubles size | Grows by 50%               |
+| Thread-safe    | ✅ Yes        | ❌ No (unless synchronized) |
+
