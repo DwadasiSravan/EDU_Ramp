@@ -226,7 +226,7 @@ class AggregationExample {
 ![image](https://github.com/user-attachments/assets/20988caa-572d-4126-91b6-d8d2d3d8a73b)
 
 ## Sorting Techniques:
-#### 1.Bubble Sort:
+### 1.Bubble Sort:
   - This algorithm is not suitable for large data sets as its average and worst-case time complexity are quite high.<br />
 ![image](https://github.com/user-attachments/assets/c6a3f61c-cbef-466c-939f-1ab55d924d75) <br />
 ![image](https://github.com/user-attachments/assets/0eaa3c9c-3682-4c63-96b4-197983abb019) <br />
@@ -279,7 +279,7 @@ class AggregationExample {
 - Time Complexity: O(n2)
 - Auxiliary Space: O(1)
 ---
-#### 2.Insertion Sort:
+### 2.Insertion Sort:
 Insertion sort is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list.
 
 - We start with the second element of the array as the first element is assumed to be sorted.
@@ -340,4 +340,4 @@ Insertion sort is a simple sorting algorithm that works by iteratively inserting
 - Average case: O(n2)
 - Auxiliary Space: O(1)
 ---
-
+### Merge Sort:
