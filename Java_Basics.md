@@ -341,3 +341,120 @@ Insertion sort is a simple sorting algorithm that works by iteratively inserting
 - Auxiliary Space: O(1)
 ---
 ### Merge Sort:
+---
+## Searching Techniques:
+### 1. Linear Search:
+In Linear Search, we iterate over all the elements of the array and check if it the current element is equal to the target element. If we find any element to be equal to the target element, then return the index of the current element. Otherwise, if no element is equal to the target element, then return -1 as the element is not found. Linear search is also known as sequential search.<br />
+![image](https://github.com/user-attachments/assets/a13886a2-e72b-405a-a0f9-3a5b2001ae2f) <br />
+![image](https://github.com/user-attachments/assets/9e51e793-3579-4d3e-b38f-523332991cb9) <br />
+![image](https://github.com/user-attachments/assets/357f66ae-432e-446f-8122-db977ed37d33) <br />
+#### Sample code:
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class LinearSearch {
+    static void linearSearch(int[] arr, int x){
+        int index = -1;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == x) {
+                index = i;
+                System.out.println("Entered number is available at the index: " + index);
+                break;
+            }
+        }
+        if(index == -1){
+            System.out.println("Entered number is not available.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the length: ");
+        int len = sc.nextInt();
+        int[] arr = new int[len];
+        System.out.println("Enter the numbers: ");
+        for(int i = 0; i < len; i++){
+            int num = sc.nextInt();
+            arr[i] = num;
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println("Enter the number to be searched: ");
+        int n = sc.nextInt();
+        linearSearch(arr, n);
+
+    }
+}
+```
+#### Time and Space Complexity of Linear Search Algorithm:
+* **Time Complexity:**
+- **Best Case:** In the best case, the key might be present at the first index. So the best case complexity is O(1)
+- **Worst Case:** In the worst case, the key might be present at the last index i.e., opposite to the end from which the search has started in the list. So the worst-case - complexity is O(N) where N is the size of the list.
+- **Average Case:** O(N)
+- **Auxiliary Space:** O(1) as except for the variable to iterate through the list, no other variable is used. 
+   ---
+### 2. Binary Search:
+Binary Search Algorithm is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(log N). <br />
+![image](https://github.com/user-attachments/assets/447fbde9-1f4b-4a18-a099-e3d191aa2ff6) <br />
+#### Conditions to apply Binary Search Algorithm in a Data Structure
+- To apply Binary Search algorithm:
+   - The data structure must be sorted.
+   - Access to any element of the data structure should take constant time.
+![image](https://github.com/user-attachments/assets/084ffe5e-acbf-41cb-8987-1e9cf5ec7489) <br />
+![image](https://github.com/user-attachments/assets/dc9fe194-62f9-42ee-8b2b-501f68526235) <br />
+![image](https://github.com/user-attachments/assets/adcf8ba8-509e-44a8-b0ab-8c99c19afe09) <br />
+![image](https://github.com/user-attachments/assets/785a6271-f771-4dc2-abba-3835272d8114) <br />
+
+#### Code Snippet: 
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BinarySearch {
+    static void binarySearch(int[] arr, int x){
+        int index = -1;
+        for(int i = 0; i < arr.length; i++){
+            int first = 0;
+            int last = arr.length - 1;
+            int mid = (first + last)/2;
+
+            if(arr[mid] == x) {
+                System.out.println("Entered number is available at the index: " + mid);
+                index = mid;
+                break;
+            }
+            if(x < arr[mid]) last = mid - 1;
+            if(x > arr[mid]) first = mid + 1;
+        }
+        if(index == -1){
+            System.out.println("Entered number is not available.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the length: ");
+        int len = sc.nextInt();
+        int[] arr = new int[len];
+        System.out.println("Enter the numbers: ");
+        for(int i = 0; i < len; i++){
+            int num = sc.nextInt();
+            arr[i] = num;
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println("Enter the number to be searched: ");
+        int n = sc.nextInt();
+        binarySearch(arr, n);
+
+    }
+}
+```
+#### Complexity Analysis of Binary Search Algorithm
+- Time Complexity: 
+   - Best Case: O(1)
+   - Average Case: O(log N)
+   - Worst Case: O(log N)
+- Auxiliary Space: O(1), If the recursive call stack is considered then the auxiliary space will be O(log N).
+
+
+
