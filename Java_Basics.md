@@ -225,5 +225,119 @@ class AggregationExample {
 ```
 ![image](https://github.com/user-attachments/assets/20988caa-572d-4126-91b6-d8d2d3d8a73b)
 
+## Sorting Techniques:
+#### 1.Bubble Sort:
+  - This algorithm is not suitable for large data sets as its average and worst-case time complexity are quite high.<br />
+![image](https://github.com/user-attachments/assets/c6a3f61c-cbef-466c-939f-1ab55d924d75) <br />
+![image](https://github.com/user-attachments/assets/0eaa3c9c-3682-4c63-96b4-197983abb019) <br />
+![image](https://github.com/user-attachments/assets/7039d964-2c7b-4b48-8346-9558f0f49562) <br />
+##### Execution:
+```java
+   // Optimized java implementation of Bubble sort
+   import java.io.*;
+   class GFG { 
+       // An optimized version of Bubble Sort
+       static void bubbleSort(int arr[], int n){
+           int i, j, temp;
+           boolean swapped;
+           for (i = 0; i < n - 1; i++) {
+               swapped = false;
+               for (j = 0; j < n - i - 1; j++) {
+                   if (arr[j] > arr[j + 1]) {  
+                       // Swap arr[j] and arr[j+1]
+                       temp = arr[j];
+                       arr[j] = arr[j + 1];
+                       arr[j + 1] = temp;
+                       swapped = true;
+                     }
+                  }
+         // If no two elements were
+         // swapped by inner loop, then break
+               if (swapped == false) break;
+           }
+       }
+       // Function to print an array
+       static void printArray(int arr[], int size){
+           int i;
+           for (i = 0; i < size; i++)
+               System.out.print(arr[i] + " ");
+           System.out.println();
+         }
+       // Driver program
+       public static void main(String args[]){
+           int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+           int n = arr.length;
+           bubbleSort(arr, n);
+           System.out.println("Sorted array: ");
+           printArray(arr, n);
+       }
+   }
+```
+* Output: <br />
+  ![image](https://github.com/user-attachments/assets/927bdb4b-02ed-46f1-b317-4da2290bd132) <br />
+##### Complexity Analysis of Bubble Sort:
+- Time Complexity: O(n2)
+- Auxiliary Space: O(1)
+---
+#### 2.Insertion Sort:
+Insertion sort is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list.
 
+- We start with the second element of the array as the first element is assumed to be sorted.
+- Compare the second element with the first element if the second element is smaller then swap them.
+- Move to the third element, compare it with the first two elements, and put it in its correct position
+- Repeat until the entire array is sorted.<br />
+![image](https://github.com/user-attachments/assets/9d1869cb-0334-4bf3-b407-84a1d926cb05) <br />
+![image](https://github.com/user-attachments/assets/0c3a1df4-a885-4051-93d9-8df9e87dbb2e) <br />
+![image](https://github.com/user-attachments/assets/3d713164-8b1f-46f9-8dab-e9405f7caaa9) <br />
+![image](https://github.com/user-attachments/assets/731ff891-4084-4022-8f1e-7ff1398ac08f) <br />
+![image](https://github.com/user-attachments/assets/542343a9-811b-401d-b5b8-a230eea63382) <br />
+##### Execution:
+```java
+   // Java program for implementation of Insertion Sort
+   public class InsertionSort {
+       /* Function to sort array using insertion sort */
+       void sort(int arr[])
+       {
+           int n = arr.length;
+            for (int i = 1; i < n; ++i) {
+               int key = arr[i];
+               int j = i - 1;
+               /* Move elements of arr[0..i-1], that are
+                  greater than key, to one position ahead
+                  of their current position */
+               while (j >= 0 && arr[j] > key) {
+                   arr[j + 1] = arr[j];
+                   j = j - 1;
+               }
+               arr[j + 1] = key;
+           }
+       }
+       /* A utility function to print array of size n */
+       static void printArray(int arr[])
+       {
+           int n = arr.length;
+           for (int i = 0; i < n; ++i)
+               System.out.print(arr[i] + " ");
+           System.out.println();
+       }
+       // Driver method
+       public static void main(String args[])
+       {
+           int arr[] = { 12, 11, 13, 5, 6 };
+           InsertionSort ob = new InsertionSort();
+           ob.sort(arr);
+           printArray(arr);
+       }
+   }
+```
+##### Output:
+![image](https://github.com/user-attachments/assets/48e7c571-9768-4308-a766-9d150b3b6ce3) <br />
+##### Illustration:
+![image](https://github.com/user-attachments/assets/c5e5f1d7-7dff-4805-b70b-58a49f43ce86) <br />
+##### Complexity Analysis of Bubble Sort:
+- Worst Case: O(n2)
+- Best case: O(n)
+- Average case: O(n2)
+- Auxiliary Space: O(1)
+---
 
