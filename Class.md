@@ -103,21 +103,19 @@ public class Main {
 ```
 ---
 
-Enum Class
-
-A special type of class used to define a fixed set of constants.
-Example:
-Copy the code
+### 7. Enum Class
+- A special type of class used to define a fixed set of constants.
+#### Example:
+```java
 public enum Day {
     MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
 }
-
-
-Singleton Class
-
-A class designed to have only one instance throughout the application.
-Example:
-Copy the code
+```
+---
+### 8. Singleton Class
+- A class designed to have only one instance throughout the application.
+#### Example:
+```java
 public class Singleton {
     private static Singleton instance;
 
@@ -130,6 +128,7 @@ public class Singleton {
         return instance;
     }
 }
-
+```
+---
 
 These types of classes allow Java developers to structure their programs effectively, depending on the requirements of the application.
