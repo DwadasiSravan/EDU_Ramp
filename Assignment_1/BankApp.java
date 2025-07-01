@@ -37,7 +37,7 @@ class SavingsAcc extends BankAcc {
 
     @Override
     public void openAcc() {
-        System.out.println("\nSavings Account opened for " + customerName + " at " + branchName + " branch.");
+        System.out.println("\nSavings Account opened for " + customerName + " at " + branchName + " branch");
     }
 
     @Override
