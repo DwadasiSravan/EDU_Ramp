@@ -311,7 +311,7 @@ public class ShareMarketTradingSystem {
             System.out.println("1. View Fundamentals of a Company");
             System.out.println("2. Buy Shares");
             System.out.println("3. Sell Shares");
-            System.out.println("4. Exit");
+            System.out.println("4. Exit.");
             System.out.print("Enter your choice: ");
             String choice = scanner.nextLine().trim();
 
