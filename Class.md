@@ -1,5 +1,6 @@
 # Class
 In Java, a class is a blueprint for creating objects. It defines properties (fields) and behaviors (methods) that the objects created from the class will have. Classes are fundamental to Java's object-oriented programming (OOP) paradigm.
+- We can say Class is a logical construct.
 
 ---
 ## Types of Classes in Java
