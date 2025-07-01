@@ -74,7 +74,7 @@ class SavingAccount implements BankAccount {
     public void withdraw(double amount) {
         Scanner sc = new Scanner(System.in);
         if (!isActive) {
-            System.out.println("Account is not active.");
+            System.out.println("Account is not active");
             return;
         }
         if (withdrawalsThisMonth >= MAX_WITHDRAWALS) {
