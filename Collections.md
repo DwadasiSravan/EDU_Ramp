@@ -318,4 +318,85 @@ Deque<String> deque = new ArrayDeque<>();
 - Linked Hash Set
 - entry Set
 
-- HAsh Map
+## Hash Map
+---
+## Vector:
+- A Vector is a legacy interface in Java which is a resizable array (just like ArrayList), but with one key difference: it is synchronized, meaning it is thread-safe.
+- But,in single threaded environment it is slower than Arraylist due to synchronization.
+#### Basic usage example:
+```java
+import java.util.Vector;
+
+public class VectorDemo {
+    public static void main(String[] args) {
+        Vector<String> vector = new Vector<>();
+
+        // Add elements
+        vector.add("Apple");
+        vector.add("Banana");
+        vector.add("Cherry");
+
+        // Get and print elements
+        for (String fruit : vector) {
+            System.out.println(fruit);
+        }
+
+        // Remove
+        vector.remove("Banana");
+
+        System.out.println("After removal: " + vector);
+    }
+}
+```
+#### Summary:
+- Use Vector only if you need thread-safety without external synchronization.
+- Prefer ArrayList for most use cases (faster and lighter).
+- For thread-safe lists in modern code, prefer:
+```java
+List<E> list = Collections.synchronizedList(new ArrayList<>());
+```
+#### 🔄 Growth Comparison: Vector vs ArrayList
+| Feature        | Vector       | ArrayList                  |
+| -------------- | ------------ | -------------------------- |
+| Initial growth | Doubles size | Grows by 50%               |
+| Thread-safe    | ✅ Yes        | ❌ No (unless synchronized) |
+
+---
+## Sorting in Collections:
+In Collections we use .sort() method is used which internally uses **TIM SORT** where it uses Insertion sort and merge sort combined.
+- **TimSort is a hybrid sorting algorithm that combines:**
+  - Merge Sort (for its stability and divide-and-conquer power)
+  - Insertion Sort (for fast performance on small or nearly sorted data)
+#### How TimSort Works (Simplified)
+- Divide array into runs (small sorted sub-arrays)
+- Use Insertion Sort for each run
+- Size of run = 32 to 64 (depends on implementation)
+- Merge the runs using Merge Sort logic
+- Use binary search and other optimizations internally
+```java
+Arrays.sort(Object[] array);
+```
+#### Example with explination:
+-  **Let's consider the following array as an example: arr[] = {4, 2, 8, 6, 1, 5, 9, 3, 7}.**
+- **Step 1:** Define the size of the run <br />
+  - Minimum run size: 32 (we'll ignore this step since our array is small)
+- **Step 2:** Divide the array into runs <br />
+  - In this step, we'll use insertion sort to sort the small subsequences (runs) within the array.
+  - The initial array: [4, 2, 8, 6, 1, 5, 9, 3, 7.
+  - No initial runs are present, so we'll create runs using insertion sort.
+  - Sorted runs: [2, 4], [6, 8], [1, 5, 9], [3, 7]
+  - Updated array: [2, 4, 6, 8, 1, 5, 9, 3, 7]
+- **Step 3:** Merge the runs
+  - In this step, we'll merge the sorted runs using a modified merge sort algorithm.
+  - Merge the runs until the entire array is sorted.
+  - Merged runs: [2, 4, 6, 8], [1, 3, 5, 7, 9]
+  - Updated array: [2, 4, 6, 8, 1, 3, 5, 7, 9]
+- **Step 4:** Adjust the run size
+  - After each merge operation, we double the size of the run until it exceeds the length of the array.
+  - The run size doubles: 32, 64, 128 (we'll ignore this step since our array is small)
+- **Step 5:** Continue merging
+  - Repeat the merging process until the entire array is sorted.
+  - Final merged run: [1, 2, 3, 4, 5, 6, 7, 8, 9] <br />
+The final sorted array is **[1, 2, 3, 4, 5, 6, 7, 8, 9]**.
+
+---
