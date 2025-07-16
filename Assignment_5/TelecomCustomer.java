@@ -55,7 +55,7 @@ class TelecomCustomer {
         if (top != null) {
             System.out.println("Processing: " + top);
         } else {
-            System.out.println("No complaints to process.");
+            System.out.println("No complaints to process");
         }
     }
 
@@ -76,4 +76,5 @@ class TelecomCustomer {
         viewComplaints();
     }
 }
+
 
