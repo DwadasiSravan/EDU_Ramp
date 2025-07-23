@@ -1,36 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="79905324-c135-4ed5-8f54-f7373b1e5580" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/dto/CustomerDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/repository/CustomerRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/service/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/discovery-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/controller/PlanController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/dto/PlanDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/model/Plan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/repository/PlanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/service/PlanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/service/PlanServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/controller/RechargeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/dto/RechargeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/model/Recharge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/repository/RechargeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/service/RechargeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/service/RechargeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/configuration/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/configuration/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/repository/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/service/CustomUserDetailsService.java" afterDir="false" />
+    <list default="true" id="0eeb6c84-1aa0-47b1-ad38-cc0556fe8cbf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/auth-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/dto/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/dto/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/dto/RegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/service/AuthServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smarttelecom/auth_service/util/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../billing-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../billing-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../billing-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eureka-server/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/smarttelecom/product_service/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/smarttelecom/product_service/dto/ProductDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/smarttelecom/product_service/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/smarttelecom/product_service/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/smarttelecom/product_service/exception/ProductNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/smarttelecom/product_service/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/smarttelecom/product_service/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/smarttelecom/product_service/service/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/dto/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/customer-service/src/main/java/com/telecom/customer_service/service/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/discovery-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/discovery-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/controller/PlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/controller/PlanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/dto/PlanDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/dto/PlanDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/model/Plan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/model/Plan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/repository/PlanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/java/com/telecom/plan_service/repository/PlanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/plan-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/controller/RechargeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/controller/RechargeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/dto/RechargeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/dto/RechargeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/model/Recharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/model/Recharge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/repository/RechargeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/repository/RechargeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/service/RechargeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/service/RechargeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/service/RechargeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/java/com/telecom/recharge_service/service/RechargeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MiniProject_2/recharge-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Student/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Student/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/StudentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/StudentApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/configuration/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/configuration/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/configuration/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/repository/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Student/src/main/java/com/example/Student/service/CustomUserDetailsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,30 +81,58 @@
     "accountId": "493a7ef5-ed7c-4023-a46e-7f776399e784"
   }
 }]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 5
 }]]></component>
-  <component name="ProjectId" id="30GQd4MWIVHlYxQcfqQWREE5vUZ" />
+  <component name="ProjectId" id="30GWbKzfFCgrO1ZlXHcdXhONEFb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AuthServiceApplication.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.auth_service.AuthServiceApplication" />
+      <module name="auth-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.auth_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AuthServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="79905324-c135-4ed5-8f54-f7373b1e5580" name="Changes" comment="" />
-      <created>1753251515317</created>
+      <changelist id="0eeb6c84-1aa0-47b1-ad38-cc0556fe8cbf" name="Changes" comment="" />
+      <created>1753254460789</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1753251515317</updated>
+      <updated>1753254460789</updated>
     </task>
     <servers />
   </component>
