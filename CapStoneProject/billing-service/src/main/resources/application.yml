@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/billingt_db
+    url: jdbc:mysql://localhost:3306/smarttelecom_billing
     username: root
-    password: Kanny@2317
+    password: 0987
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
